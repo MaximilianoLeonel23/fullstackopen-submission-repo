@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:3001/persons";
+const baseUrl = "https://fullstackopen-backend-ss0y.onrender.com/api/persons";
 
 const createNewPerson = (newPerson) => {
   const request = axios.post(baseUrl, newPerson);

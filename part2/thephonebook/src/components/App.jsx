@@ -14,10 +14,12 @@ const App = () => {
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
   useEffect(() => {
-    axios.get("http://localhost:3001/persons").then((response) => {
-      const newData = response.data;
-      setPersons(newData);
-    });
+    axios
+      .get("https://fullstackopen-backend-ss0y.onrender.com/api/persons")
+      .then((response) => {
+        const newData = response.data;
+        setPersons(newData);
+      });
   }, []);
 
   // Adding new persons
