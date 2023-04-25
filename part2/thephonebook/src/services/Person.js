@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://fullstackopen-backend-ss0y.onrender.com/api/persons";
+const baseUrl = "http://localhost:3002/api/persons";
 
 const createNewPerson = (newPerson) => {
   const request = axios.post(baseUrl, newPerson);
@@ -14,6 +14,7 @@ const deletePerson = (personToDelete) => {
 };
 
 const updatePerson = (id, newPerson) => {
+  console.log("id", id, "new person", newPerson);
   const request = axios.put(`${baseUrl}/${id}`, newPerson);
   return request.then((response) => response.data);
 };
